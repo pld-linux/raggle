@@ -27,7 +27,7 @@ Raggle to konsolowy czytnik RSS napisany w Ruby. Posiada on
 modyfikowalne skróty klawiszowe, podstawowe renderowanie HTML, obs³ugê
 HTTP proxy, importowanie i eksportowanie OPML, motywy, obs³ugê wielu
 wersji RSS, wsparcie dla screena, automatyczn± identyfikacjê
-przegl±darki i wiele wiecêj. Raggle zosta³ przetestowany na Linuksie i
+przegl±darki i wiele wiêcej. Raggle zosta³ przetestowany na Linuksie i
 OpenBSD, ale powinien równie¿ dzia³aæ pod innymi Uniksami.
 
 %prep
