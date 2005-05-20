@@ -2,12 +2,12 @@
 Summary:	Console RSS reader
 Summary(pl):	Konsolowy czytnik RSS
 Name:		raggle
-Version:	0.3.2
+Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://www.raggle.org/files/%{name}-%{version}.tar.gz
-# Source0-md5:	b8677e1ec21a758105155f5929e03929
+# Source0-md5:	69a100f9fe24e328e6fe61b543282bb1
 URL:		http://www.raggle.org/
 BuildRequires:	ruby
 Requires:	ruby-Ncurses
@@ -35,9 +35,13 @@ OpenBSD, ale powinien równie¿ dzia³aæ pod innymi Uniksami.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/{extras,themes},%{_mandir}/man1}
 
-cp -a themes extras $RPM_BUILD_ROOT%{_datadir}/%{name}
+find . -type d -name CVS | xargs rm -rf
+
+cp -a extras/web_ui $RPM_BUILD_ROOT%{_datadir}/%{name}/extras
+install extras/*.rb $RPM_BUILD_ROOT%{_datadir}/%{name}/extras
+install themes/*.yaml $RPM_BUILD_ROOT%{_datadir}/%{name}/themes
 install %{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 
@@ -48,5 +52,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc AUTHORS BUGS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
-%{_mandir}/*/*
+%attr(755,root,root) %{_datadir}/%{name}/extras/*[pstb].rb
+%dir %{_datadir}/%{name}
+%dir %{_datadir}/%{name}/extras
+%{_datadir}/%{name}/extras/web_ui
+%{_datadir}/%{name}/extras/test_html_renderer.rb
+%{_datadir}/%{name}/themes
+%{_mandir}/man1/*
