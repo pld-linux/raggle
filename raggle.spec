@@ -1,4 +1,3 @@
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 Summary:	Console RSS reader
 Summary(pl):	Konsolowy czytnik RSS
 Name:		raggle
@@ -9,6 +8,7 @@ Group:		Applications
 Source0:	http://www.raggle.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	95c41b6d516996845519c5b073d75f49
 URL:		http://www.raggle.org/
+BuildRequires:	rpmbuild(macros) >= 1.272
 BuildRequires:	ruby
 Requires:	ruby-Ncurses
 BuildArch:	noarch
@@ -32,12 +32,11 @@ OpenBSD, ale powinien równie¿ dzia³aæ pod innymi Uniksami.
 
 %prep
 %setup -q
+find . -type d -name CVS | xargs rm -rf
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/{extras,themes},%{_mandir}/man1}
-
-find . -type d -name CVS | xargs rm -rf
 
 cp -a extras/web_ui $RPM_BUILD_ROOT%{_datadir}/%{name}/extras
 install extras/*.rb $RPM_BUILD_ROOT%{_datadir}/%{name}/extras
