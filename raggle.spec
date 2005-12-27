@@ -2,14 +2,14 @@ Summary:	Console RSS reader
 Summary(pl):	Konsolowy czytnik RSS
 Name:		raggle
 Version:	0.4.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications
 Source0:	http://www.raggle.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	95c41b6d516996845519c5b073d75f49
 URL:		http://www.raggle.org/
 BuildRequires:	rpmbuild(macros) >= 1.272
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 Requires:	ruby-Ncurses
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
