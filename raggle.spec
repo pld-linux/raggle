@@ -8,10 +8,11 @@ Group:		Applications
 Source0:	http://www.raggle.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	95c41b6d516996845519c5b073d75f49
 URL:		http://www.raggle.org/
-BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
 Requires:	ruby-Ncurses
 BuildArch:	noarch
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
