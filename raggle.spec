@@ -1,5 +1,5 @@
 Summary:	Console RSS reader
-Summary(pl):	Konsolowy czytnik RSS
+Summary(pl.UTF-8):   Konsolowy czytnik RSS
 Name:		raggle
 Version:	0.4.4
 Release:	1
@@ -23,13 +23,13 @@ Screen support, browser auto-detection, and more. Raggle has been
 tested under Linux and OpenBSD, and should work properly under other
 Unix variants as well.
 
-%description -l pl
+%description -l pl.UTF-8
 Raggle to konsolowy czytnik RSS napisany w Ruby. Posiada on
-modyfikowalne skróty klawiszowe, podstawowe renderowanie HTML, obs³ugê
-HTTP proxy, importowanie i eksportowanie OPML, motywy, obs³ugê wielu
-wersji RSS, wsparcie dla screena, automatyczn± identyfikacjê
-przegl±darki i wiele wiêcej. Raggle zosta³ przetestowany na Linuksie i
-OpenBSD, ale powinien równie¿ dzia³aæ pod innymi Uniksami.
+modyfikowalne skrÃ³ty klawiszowe, podstawowe renderowanie HTML, obsÅ‚ugÄ™
+HTTP proxy, importowanie i eksportowanie OPML, motywy, obsÅ‚ugÄ™ wielu
+wersji RSS, wsparcie dla screena, automatycznÄ… identyfikacjÄ™
+przeglÄ…darki i wiele wiÄ™cej. Raggle zostaÅ‚ przetestowany na Linuksie i
+OpenBSD, ale powinien rÃ³wnieÅ¼ dziaÅ‚aÄ‡ pod innymi Uniksami.
 
 %prep
 %setup -q
