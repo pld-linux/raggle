@@ -1,5 +1,5 @@
 Summary:	Console RSS reader
-Summary(pl.UTF-8):   Konsolowy czytnik RSS
+Summary(pl.UTF-8):	Konsolowy czytnik RSS
 Name:		raggle
 Version:	0.4.4
 Release:	1
